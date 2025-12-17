@@ -1,0 +1,127 @@
+<section id="about" class="py-10 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- WRAPPER -->
+    <div class="flex flex-col md:flex-row gap-10 items-stretch">
+      <!-- ================= LEFT PROFILE ================= -->
+      <div class="md:w-1/3 flex flex-col gap-6 md:gap-8">
+        <!-- TOP PROFILE (Mobile: row | Desktop: column) -->
+        <div
+          class="flex items-center gap-4 sm:gap-6 md:flex-col md:items-start md:gap-6"
+        >
+          <!-- PROFILE IMAGE -->
+          <app-smart-image
+            [src]="profileData.profilePicture"
+            [alt]="'Profile'"
+            class="w-24 h-24 sm:w-28 sm:h-28 md:w-72 md:h-72 rounded-2xl md:rounded-3xl"
+          />
+
+          <!-- NAME + META -->
+          <div class="flex flex-col gap-1 md:gap-3">
+            <!-- NAME -->
+            <h3
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white"
+            >
+              {{ profileData.name }}
+            </h3>
+
+            <!-- ACCENT LINE -->
+            <div
+              class="h-[3px] w-full rounded-full bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-500"
+            ></div>
+
+            <!-- TITLE -->
+            <p
+              class="text-sm sm:text-base md:text-lg font-medium text-gray-600 dark:text-gray-400"
+            >
+              {{ profileData.title }}
+            </p>
+
+            <!-- LOCATION -->
+            <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+              {{ profileData.address }}
+            </p>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div
+          class="hidden md:block h-px w-full bg-gray-200 dark:bg-gray-700"
+        ></div>
+
+        <!-- HIGHLIGHTS -->
+        <div class="flex flex-col gap-3 text-sm md:text-base">
+          <p class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+            ⚡ <span>3+ Years Experience</span>
+          </p>
+
+          <p class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+            🛠 <span>Angular · Tailwind · TypeScript</span>
+          </p>
+
+          <p class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+            🎯 <span>Focus: Clean UI & UX</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ================= RIGHT CONTENT ================= -->
+      <div class="md:w-2/3 grid grid-rows-[1fr_auto]">
+        <!-- CONTENT TOP -->
+        <div class="md:space-y-8">
+          <!-- Eyebrow -->
+          <span
+            class="uppercase tracking-widest text-sm font-semibold text-sky-600 dark:text-sky-400"
+          >
+            About Me
+          </span>
+
+          <!-- Hero Title -->
+          <h1
+            class="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white"
+          >
+            Hi, I’m
+            <span
+              class="ml-2 bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent"
+            >
+              {{ typedName }}
+            </span>
+
+            <!-- Cursor -->
+            <span
+              class="inline-block w-[2px] h-[1em] bg-gray-900 dark:bg-white ml-1 animate-blink"
+            ></span>
+          </h1>
+
+          <!-- Role -->
+          <h2
+            class="text-xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300"
+          >
+            {{ profileData.title }}
+          </h2>
+
+          <!-- Summary -->
+          <p class="max-w-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+            {{ profileData.summary }}
+          </p>
+        </div>
+
+        <!-- CTA (STUCK TO BOTTOM) -->
+        <div class="flex gap-2 md:gap-4 pt-8 justify-center md:justify-end">
+          <button
+            class="px-4 py-2 md:px-6 md:py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            (click)="downloadCV()"
+          >
+            Download CV
+          </button>
+
+          <button
+            class="btn-gradient px-4 py-2 md:px-6 md:py-3 rounded-lg font-medium shadow-md hover:scale-[1.03] transition"
+            (click)="scrollToCareerTabs()"
+          >
+            View My Career
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

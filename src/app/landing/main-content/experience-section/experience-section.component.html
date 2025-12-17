@@ -1,0 +1,14 @@
+<section id="experience" class="pb-10 px-6 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-8">
+    <app-card
+      *ngFor="let experience of experiences"
+      [logo]="experience?.companyLogo"
+      [title]="experience?.company"
+      [subtitle]="experience?.position"
+      [date]="experience?.startDate + ' - ' + experience?.endDate"
+      [location]="experience?.location"
+      [description]="experience?.summary"
+      [detailLink]="'/details/experience/' + experience?.id"
+    ></app-card>
+  </div>
+</section>

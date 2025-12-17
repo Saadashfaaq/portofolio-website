@@ -2,3 +2,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Clash Display (Bold) */
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("/assets/fonts/ClashDisplay-Medium.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "ClashDisplay";
+  font-weight: 700;
+}
+
+:root {
+  --button-gradient-start: #6366f1; // indigo-ish
+  --button-gradient-end: #22d3ee; // cyan-ish
+}
+
+.dark {
+  --button-gradient-start: #818cf8;
+  --button-gradient-end: #38bdf8;
+}
+
+.btn-gradient {
+  background: linear-gradient(
+    45deg,
+    var(--button-gradient-start),
+    var(--button-gradient-end)
+  );
+  color: white;
+}
+
+.btn-gradient {
+  background-size: 200% 200%;
+  transition: background-position 0.4s ease, transform 0.2s ease;
+}
+
+.btn-gradient:hover {
+  background-position: right center;
+}
+
+/* ===== ANIMATED GRADIENT SHADOW ===== */
+.shadow-animated {
+  position: relative;
+  z-index: 0;
+}
+
+.shadow-animated::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  border-radius: 1.5rem;
+
+  background: linear-gradient(120deg, #00ccb1, #7b61ff, #1ca0fb);
+  background-size: 300% 300%;
+
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  animation: shadowGradientMove 6s ease infinite;
+}
+
+.shadow-animated:hover::before {
+  opacity: 0.4;
+}
+
+/* Dark mode: matikan shadow */
+.dark .shadow-animated::before {
+  display: none;
+}
+
+@keyframes shadowGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 37%, #e5e7eb 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.dark .skeleton-shimmer {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 37%, #374151 63%);
+}

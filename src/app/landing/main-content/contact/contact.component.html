@@ -1,0 +1,60 @@
+<section id="contact" class="pb-11 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- SECTION HEADER -->
+    <div class="mb-12 text-center">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white"
+      >
+        Contact Me
+      </h2>
+
+      <p
+        class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto"
+      >
+        Feel free to reach out for collaboration, opportunities, or just a
+        friendly hello 👋
+      </p>
+    </div>
+
+    <!-- CONTACT GRID -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- CONTACT CARD -->
+      <a
+        *ngFor="let contact of contactCards"
+        [href]="contact.url"
+        target="_blank"
+        rel="noopener"
+        class="group flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 transition-all hover:-translate-y-1 hover:shadow-lg hover:border-transparent hover:bg-gray-100 dark:hover:bg-gray-700 hover:from-sky-500/10 hover:via-blue-500/10 hover:to-indigo-500/10"
+      >
+        <!-- ICON -->
+        <div
+          class="w-12 h-12 rounded-xl flex items-center justify-center bg-gray-100 dark:bg-gray-700 group-hover:bg-gradient-to-br group-hover:from-sky-500 group-hover:to-indigo-500 transition"
+        >
+          <span
+            class="material-icons text-xl text-gray-700 dark:text-gray-200 group-hover:text-white transition"
+          >
+            {{ contact.icon }}
+          </span>
+        </div>
+
+        <!-- TEXT -->
+        <div class="flex-1 min-w-0">
+          <h4 class="text-sm font-semibold text-gray-900 dark:text-white">
+            {{ contact.label }}
+          </h4>
+
+          <p class="text-xs text-gray-500 dark:text-gray-400 truncate">
+            {{ contact.subText }}
+          </p>
+        </div>
+
+        <!-- ARROW -->
+        <span
+          class="material-icons text-gray-400 group-hover:text-sky-500 transition"
+        >
+          chevron_right
+        </span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<section id="educations" class="pb-10 px-6 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-8">
+    <app-card
+      *ngFor="let education of educations"
+      [logo]="education?.image"
+      [title]="education?.institution"
+      [subtitle]="education?.program"
+      [date]="education?.graduationYear"
+      [location]="education?.location"
+      [description]="education?.summary"
+    ></app-card>
+  </div>
+</section>

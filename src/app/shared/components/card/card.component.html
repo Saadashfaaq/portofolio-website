@@ -1,0 +1,69 @@
+<!-- GRADIENT BORDER WRAPPER -->
+<div
+  class="card-gradient-border animate-fade-in shadow-animated hover:-translate-y-2 transition-all duration-300"
+>
+  <!-- CARD CONTENT -->
+  <div
+    class="card-wrapper relative bg-white dark:bg-gray-800 rounded-2xl p-6 transition-all duration-300 flex flex-col gap-4"
+  >
+    <!-- TOP: LOGO + TEXT -->
+    <div *ngIf="!skillSection" class="flex items-start gap-4">
+      <app-smart-image
+        *ngIf="logo"
+        [src]="logo"
+        [alt]="'card logo'"
+        class="w-14 h-14 rounded-lg object-cover flex-shrink-0 drop-shadow-md dark:drop-shadow-none"
+      />
+
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+          {{ title }}
+        </h3>
+
+        <p *ngIf="subtitle" class="text-sm text-gray-600 dark:text-gray-300">
+          {{ subtitle }}
+        </p>
+
+        <p
+          *ngIf="date || location"
+          class="text-xs text-gray-500 dark:text-gray-400"
+        >
+          {{ date }}
+          <span *ngIf="date && location"> • </span>
+          {{ location }}
+        </p>
+      </div>
+    </div>
+
+    <!-- TOP: LOGO + TEXT  skillSection-->
+    <div *ngIf="skillSection" class="flex items-center gap-4">
+      <app-smart-image
+        *ngIf="logo"
+        [src]="logo"
+        [alt]="'card logo'"
+        class="w-14 h-14 rounded-lg object-cover flex-shrink-0 drop-shadow-md dark:drop-shadow-none"
+      />
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+        {{ title }}
+      </h3>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <p
+      *ngIf="description"
+      class="text-sm text-gray-700 dark:text-gray-200 leading-relaxed"
+    >
+      {{ description }}
+    </p>
+
+    <!-- BUTTON -->
+    <div *ngIf="detailLink" class="flex justify-end">
+      <button
+        [routerLink]="detailLink"
+        class="btn-gradient text-sm px-4 py-2 rounded-lg shadow-md hover:scale-[1.02] transition"
+      >
+        {{ buttonLabel }}
+      </button>
+    </div>
+  </div>
+</div>

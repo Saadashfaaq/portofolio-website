@@ -1,0 +1,17 @@
+<div class="relative w-full h-full overflow-hidden rounded-xl">
+  <!-- Skeleton -->
+  <div *ngIf="!loaded" class="absolute inset-0 skeleton-shimmer"></div>
+
+  <!-- Image -->
+  <img
+    [src]="src"
+    [alt]="alt"
+    loading="lazy"
+    decoding="async"
+    (load)="onLoad()"
+    (error)="onError()"
+    class="w-full h-full object-cover transition-opacity duration-300"
+    [class.opacity-0]="!loaded"
+    [class.opacity-100]="loaded"
+  />
+</div>

@@ -1,0 +1,14 @@
+<section id="projects" class="pb-10 px-6 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-8">
+    <app-card
+      *ngFor="let project of projects"
+      [logo]="project?.logo"
+      [title]="project?.name"
+      [subtitle]="project?.role"
+      [date]="project?.period"
+      [location]="project?.location"
+      [description]="project?.summary"
+      [detailLink]="'/details/project/' + project?.id"
+    ></app-card>
+  </div>
+</section>
