@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewModeService } from './core/services/view-mode.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,12 @@ import { ViewModeService } from './core/services/view-mode.service';
 })
 export class AppComponent {
   title = 'portofolio-website';
-  constructor(public viewModeService: ViewModeService) {}
+
+  constructor(
+    private translate: TranslateService,
+    public viewModeService: ViewModeService
+  ) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 }

@@ -6,8 +6,8 @@ export const EXPERIENCE: Experience[] = [
     company: 'Zettabyte',
     companyLogo: 'assets/images/logo/zetta.webp',
     experienceImages: [
-      'assets/images/certificate/Certif (1)_page-0001.jpg',
-      'assets/images/certificate/Certif (1)_page-0002.jpg',
+      'assets/images/work-experience/zet-project/zetta-1.png',
+      'assets/images/work-experience/zet-project/zetta-2.png',
     ],
     summary:
       'Developed and enhanced features for an education platform in France that supports the full academic lifecycle of university students. The platform covers end-to-end student journeys, including enrollment, learning activities, remedial exams, tuition payments, internships, graduation, and career preparation.',
@@ -47,8 +47,12 @@ export const EXPERIENCE: Experience[] = [
     company: 'PT Hasnur Riung',
     companyLogo: 'assets/images/logo/hasnur.webp',
     experienceImages: [
-      'assets/images/certificate/Certif (1)_page-0001.jpg',
-      'assets/images/certificate/Certif (1)_page-0002.jpg',
+      'assets/images/work-experience/has-project/has-1.png',
+      'assets/images/work-experience/has-project/has-2.png',
+      'assets/images/work-experience/has-project/has-3.png',
+      'assets/images/work-experience/has-project/has-4.png',
+      'assets/images/work-experience/has-project/has-5.png',
+      'assets/images/work-experience/has-project/has-6.png',
     ],
     summary:
       'Developed an internal HR web application for PT Hasnur Riung to streamline employee leave management and significantly reduce operational overhead. The system supports the complete leave workflow, from submission and supervisor approval to document generation and flight ticket requests.',

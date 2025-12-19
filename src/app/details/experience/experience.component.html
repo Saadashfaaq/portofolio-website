@@ -11,7 +11,7 @@
         class="inline-flex pl-1.5 pr-4 py-1 md:pl-3 md:pr-5 md:pl-3 md:py-2 btn-gradient rounded-lg shadow-md hover:scale-[1.02] items-center gap-1 transition"
       >
         <span class="material-icons text-sm">arrow_left</span>
-        <span class="text-sm">Back</span>
+        <span class="text-sm">{{ "Back" | translate }}</span>
       </button>
       <!-- TOP PROFILE (Mobile: row | Desktop: column) -->
       <div
@@ -58,10 +58,10 @@
         <span
           class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
         >
-          Summary
+          {{ "Summary" | translate }}
         </span>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          {{ experienceData?.summary }}
+          {{ experienceData?.summary | translate }}
         </p>
       </section>
 
@@ -70,11 +70,11 @@
         <span
           class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
         >
-          Responsibilities
+          {{ "Responsibilities" | translate }}
         </span>
         <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
           <li *ngFor="let responsibilities of experienceData?.responsibilities">
-            {{ responsibilities }}
+            {{ responsibilities | translate }}
           </li>
         </ul>
       </section>
@@ -87,7 +87,7 @@
         <nav class="text-sm text-gray-500 dark:text-gray-400 space-x-1">
           <!-- HOME -->
           <a [routerLink]="'/'" class="hover:underline cursor-pointer">
-            Home
+            {{ "Home" | translate }}
           </a>
 
           <span>/</span>
@@ -99,7 +99,7 @@
             fragment="portofolio"
             class="hover:underline cursor-pointer"
           >
-            Experiences
+            {{ "Experiences" | translate }}
           </a>
 
           <span>/</span>
@@ -147,7 +147,7 @@
         <span
           class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
         >
-          Technologies
+          {{ "Technologies" | translate }}
         </span>
 
         <div class="flex flex-wrap gap-4 mt-2">
@@ -168,14 +168,14 @@
         <span
           class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
         >
-          Achievements
+          {{ "Achievements" | translate }}
         </span>
 
         <ul
           class="list-disc mt-1 ml-6 space-y-2 text-gray-700 dark:text-gray-300"
         >
           <li *ngFor="let achievements of experienceData.achievements">
-            {{ achievements }}
+            {{ achievements | translate }}
           </li>
         </ul>
       </section>

@@ -10,6 +10,7 @@ import { AboutSectionComponent } from './main-content/about-section/about-sectio
 import { ProjectSectionComponent } from './main-content/project-section/project-section.component';
 import { SharedModule } from '../shared/shared.module';
 import { ContactComponent } from './main-content/contact/contact.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ContactComponent } from './main-content/contact/contact.component';
     ProjectSectionComponent,
     ContactComponent,
   ],
-  imports: [CommonModule, LandingRoutingModule, SharedModule],
+  imports: [CommonModule, LandingRoutingModule, SharedModule, TranslateModule],
   exports: [],
 })
 export class LandingModule {}

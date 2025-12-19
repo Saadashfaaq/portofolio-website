@@ -7,6 +7,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { CertificationComponent } from './certification/certification.component';
 import { ProjectComponent } from './project/project.component';
 import { SharedModule } from '../shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { SharedModule } from '../shared/shared.module';
     CertificationComponent,
     ProjectComponent,
   ],
-  imports: [CommonModule, DetailsRoutingModule, SharedModule],
+  imports: [CommonModule, DetailsRoutingModule, SharedModule, TranslateModule],
 })
 export class DetailsModule {}

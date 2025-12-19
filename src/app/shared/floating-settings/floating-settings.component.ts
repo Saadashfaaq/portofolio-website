@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Theme } from 'src/app/core/models/theme.model';
 import { ThemeService } from 'src/app/core/services/theme.service';
 import { ViewModeService } from 'src/app/core/services/view-mode.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-floating-settings',
@@ -11,8 +12,14 @@ import { ViewModeService } from 'src/app/core/services/view-mode.service';
 export class FloatingSettingsComponent {
   constructor(
     public themeService: ThemeService,
-    public viewModeService: ViewModeService
-  ) {}
+    public viewModeService: ViewModeService,
+    private translate: TranslateService
+  ) {
+    const savedLang = localStorage.getItem('appLanguage') as 'en' | 'id' | null;
+    this.language = savedLang || 'en';
+    this.translate.use(this.language);
+  }
+
   theme: Theme = this.themeService.theme; // reactive signal value
 
   isOpen = false;
@@ -36,6 +43,8 @@ export class FloatingSettingsComponent {
 
   toggleLanguage() {
     this.language = this.language === 'en' ? 'id' : 'en';
+    this.translate.use(this.language);
+    localStorage.setItem('appLanguage', this.language);
   }
 
   triggerHaptic() {
