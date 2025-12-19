@@ -47,8 +47,8 @@ export const PROJECT: Project[] = [
     ],
 
     links: {
-      live: 'https://yourdomain.com',
-      github: 'https://github.com/username/portfolio-website',
+      live: 'https://portofolio-website-three-plum.vercel.app/',
+      github: 'https://github.com/Saadashfaaq/portofolio-website',
     },
   },
   {
@@ -98,7 +98,7 @@ export const PROJECT: Project[] = [
 
     links: {
       live: 'https://yourdomain.com',
-      github: 'https://github.com/username/portfolio-website',
+      github: 'https://github.com/Saadashfaaq/portofolio-website',
     },
   },
 ];
