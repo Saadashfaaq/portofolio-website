@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
+  @ViewChild('desc') descRef!: ElementRef<HTMLParagraphElement>;
   @Input() logo!: string | null;
   @Input() title!: string; // required
   @Input() subtitle!: string | null;
@@ -18,6 +19,9 @@ export class CardComponent {
   @Input() buttonLabel: string = 'View Details';
   @Input() skillSection!: boolean;
 
+  isExpanded: boolean = false;
+  showToggle: boolean = false;
+
   /**
    * IntersectionObserver instance used to detect elements entering the viewport.
    */
@@ -25,6 +29,30 @@ export class CardComponent {
 
   ngAfterViewInit(): void {
     this.initializeIntersectionObserver();
+    this.checkIfClamped();
+  }
+
+  /**
+   * Toggles the expanded state of the description text.
+   * When expanded, the full description is shown.
+   * When collapsed, the description is limited by the line clamp.
+   */
+  toggleDescription(): void {
+    this.isExpanded = !this.isExpanded;
+  }
+
+  /**
+   * Checks whether the description text is visually truncated (clamped).
+   * Compares the rendered height with the scrollable height to determine
+   * if the content exceeds the maximum visible lines.
+   *
+   * If the content is clamped, the "View more / View less" toggle will be shown.
+   */
+  private checkIfClamped(): void {
+    const el = this.descRef?.nativeElement;
+    if (!el) return;
+
+    this.showToggle = el.scrollHeight > el.clientHeight;
   }
 
   /**
