@@ -5,7 +5,7 @@ export const CERTIFICATIONS: Certification[] = [
     id: '1',
     certificateImages: ['assets/images/certificate/Certif (1)_page-0002.jpg'],
     title: 'Fullstack Web Developer',
-    institution: 'Purwadhika Digital Technology School',
+    institution: 'Purwadhika',
     institutionLogo: 'assets/images/logo/purwadhika.jpg',
     summary:
       'Completed an intensive full-stack web development bootcamp at Purwadhika Digital Technology School, starting from fundamental web technologies and progressing into modern full-stack development. The program emphasized hands-on projects, real-world workflows, and collaborative development using the MERN stack.',

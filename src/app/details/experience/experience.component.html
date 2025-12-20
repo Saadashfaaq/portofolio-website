@@ -1,22 +1,20 @@
 <section class="min-h-screen w-full bg-gray-50 dark:bg-gray-900">
+  <!-- Back Button -->
+  <button
+    routerLink="/"
+    class="inline-flex pl-1.5 pr-4 py-1 md:pl-3 md:pr-5 md:pl-3 md:py-2 btn-gradient rounded-lg shadow-md hover:scale-[1.02] items-center gap-1 transition ml-4 mt-5"
+  >
+    <span class="material-icons text-sm">arrow_left</span>
+    <span class="text-sm">{{ "Back" | translate }}</span>
+  </button>
   <!-- GRID 2 KOLOM DESKTOP, 1 KOLOM MOBILE -->
   <div
     class="container mx-auto px-4 py-5 md:py-10 grid grid-cols-1 lg:grid-cols-2 gap-10"
   >
     <!-- LEFT SECTION -->
     <section class="space-y-4">
-      <!-- Back Button -->
-      <button
-        routerLink="/"
-        class="inline-flex pl-1.5 pr-4 py-1 md:pl-3 md:pr-5 md:pl-3 md:py-2 btn-gradient rounded-lg shadow-md hover:scale-[1.02] items-center gap-1 transition"
-      >
-        <span class="material-icons text-sm">arrow_left</span>
-        <span class="text-sm">{{ "Back" | translate }}</span>
-      </button>
       <!-- TOP PROFILE (Mobile: row | Desktop: column) -->
-      <div
-        class="flex items-center gap-4 sm:gap-6 md:flex-col md:items-start md:gap-6"
-      >
+      <div class="flex items-start gap-4 sm:gap-6">
         <!-- IMAGE -->
         <app-smart-image
           [src]="experienceData.companyLogo"
@@ -55,25 +53,34 @@
 
       <!-- Summary -->
       <section>
-        <span
-          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+        <div class="mb-2 md:my-0 sm:my-0 mt-4">
+          <span
+            class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+          >
+            {{ "Summary" | translate }}
+          </span>
+        </div>
+        <p
+          class="text-gray-700 dark:text-gray-300 leading-snug md:leading-normal"
         >
-          {{ "Summary" | translate }}
-        </span>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
           {{ experienceData?.summary | translate }}
         </p>
       </section>
 
       <!-- Responsibilities -->
       <section>
-        <span
-          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
-        >
-          {{ "Responsibilities" | translate }}
-        </span>
-        <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
-          <li *ngFor="let responsibilities of experienceData?.responsibilities">
+        <div class="mb-2 md:mb-0 sm:mb-0">
+          <span
+            class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+          >
+            {{ "Responsibilities" | translate }}
+          </span>
+        </div>
+        <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300">
+          <li
+            class="leading-snug md:leading-normal"
+            *ngFor="let responsibilities of experienceData?.responsibilities"
+          >
             {{ responsibilities | translate }}
           </li>
         </ul>
@@ -112,6 +119,13 @@
       </div>
 
       <!-- Image Slider -->
+      <div class="mb-2 mt-4 md:hidden">
+        <span
+          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+        >
+          {{ "Feature Images" | translate }}
+        </span>
+      </div>
       <div class="relative w-full overflow-hidden rounded-xl shadow-lg">
         <app-smart-image
           [src]="experienceData?.experienceImages[currentImage]"
@@ -142,8 +156,27 @@
         </button>
       </div>
 
+      <!-- ACHIEVEMENTS -->
+      <section class="mt-6">
+        <div class="mb-2 md:mb-0 sm:mb-0">
+          <span
+            class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+          >
+            {{ "Achievements" | translate }}
+          </span>
+        </div>
+
+        <ul
+          class="list-disc mt-1 ml-6 space-y-2 text-gray-700 dark:text-gray-300"
+        >
+          <li *ngFor="let achievements of experienceData.achievements">
+            {{ achievements | translate }}
+          </li>
+        </ul>
+      </section>
+
       <!-- Technologies -->
-      <section class="mt-10">
+      <section class="mt-6">
         <span
           class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
         >
@@ -161,23 +194,6 @@
             </span>
           </div>
         </div>
-      </section>
-
-      <!-- ACHIEVEMENTS -->
-      <section class="mt-10">
-        <span
-          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
-        >
-          {{ "Achievements" | translate }}
-        </span>
-
-        <ul
-          class="list-disc mt-1 ml-6 space-y-2 text-gray-700 dark:text-gray-300"
-        >
-          <li *ngFor="let achievements of experienceData.achievements">
-            {{ achievements | translate }}
-          </li>
-        </ul>
       </section>
     </section>
   </div>

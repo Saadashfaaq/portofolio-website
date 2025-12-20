@@ -1,22 +1,21 @@
 <section class="min-h-screen w-full bg-gray-50 dark:bg-gray-900">
+  <!-- Back Button -->
+  <button
+    routerLink="/"
+    class="inline-flex pl-1.5 pr-4 py-1 md:pl-3 md:pr-5 md:pl-3 md:py-2 btn-gradient rounded-lg shadow-md hover:scale-[1.02] items-center gap-1 transition ml-4 mt-5"
+  >
+    <span class="material-icons text-sm">arrow_left</span>
+    <span class="text-sm">{{ "Back" | translate }}</span>
+  </button>
+
   <!-- GRID 2 KOLOM DESKTOP, 1 KOLOM MOBILE -->
   <div
-    class="container mx-auto px-4 py-5 md:py-10 grid grid-cols-1 lg:grid-cols-2 gap-10"
+    class="container mx-auto px-4 py-5 md:py-10 grid grid-cols-1 lg:grid-cols-2 md:gap-10"
   >
     <!-- LEFT SECTION -->
     <section class="space-y-4">
-      <!-- Back Button -->
-      <button
-        routerLink="/"
-        class="inline-flex pl-1.5 pr-4 py-1 md:pl-3 md:pr-5 md:pl-3 md:py-2 btn-gradient rounded-lg shadow-md hover:scale-[1.02] items-center gap-1 transition"
-      >
-        <span class="material-icons text-sm">arrow_left</span>
-        <span class="text-sm">{{ "Back" | translate }}</span>
-      </button>
       <!-- TOP PROFILE (Mobile: row | Desktop: column) -->
-      <div
-        class="flex items-center gap-4 sm:gap-6 md:flex-col md:items-start md:gap-6"
-      >
+      <div class="flex items-start gap-4 sm:gap-6">
         <!-- project IMAGE -->
         <app-smart-image
           [src]="projectData.logo"
@@ -59,25 +58,34 @@
 
       <!-- Summary -->
       <section>
-        <span
-          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+        <div class="mb-2 md:my-0 sm:my-0 mt-4">
+          <span
+            class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+          >
+            {{ "Summary" | translate }}
+          </span>
+        </div>
+        <p
+          class="text-gray-700 dark:text-gray-300 leading-snug md:leading-normal"
         >
-          {{ "Summary" | translate }}
-        </span>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
           {{ projectData?.summary | translate }}
         </p>
       </section>
 
       <!-- Features -->
       <section>
-        <span
-          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
-        >
-          {{ "Features" | translate }}
-        </span>
-        <ul class="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
-          <li *ngFor="let feature of projectData?.features">
+        <div class="mb-2 md:mb-0 sm:mb-0">
+          <span
+            class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+          >
+            {{ "Features" | translate }}
+          </span>
+        </div>
+        <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300">
+          <li
+            class="leading-snug md:leading-normal"
+            *ngFor="let feature of projectData?.features"
+          >
             {{ feature | translate }}
           </li>
         </ul>
@@ -116,6 +124,13 @@
       </div>
 
       <!-- Image Slider -->
+      <div class="mb-2 mt-4 md:hidden">
+        <span
+          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+        >
+          {{ "Project Image" | translate }}
+        </span>
+      </div>
       <div class="relative w-full overflow-hidden rounded-xl shadow-lg">
         <app-smart-image
           [src]="projectData?.images[currentImage]"
@@ -147,12 +162,14 @@
       </div>
 
       <!-- Technologies -->
-      <section class="mt-10">
-        <span
-          class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
-        >
-          {{ "Technologies" | translate }}
-        </span>
+      <section class="mt-6">
+        <div class="mb-2 md:mb-0 sm:mb-0">
+          <span
+            class="uppercase tracking-widest text-base font-semibold text-sky-600 dark:text-sky-400"
+          >
+            {{ "Technologies" | translate }}
+          </span>
+        </div>
 
         <div class="flex flex-wrap gap-4 mt-2">
           <div
@@ -167,7 +184,7 @@
         </div>
       </section>
 
-      <div class="flex mt-10 gap-2 md:gap-4 pt-8 justify-center md:justify-end">
+      <div class="flex mt-6 gap-2 md:gap-4 pt-8 justify-center md:justify-end">
         <button
           (click)="openGithub()"
           class="px-4 py-2 md:px-6 md:py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
