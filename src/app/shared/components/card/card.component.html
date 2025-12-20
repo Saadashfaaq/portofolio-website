@@ -1,10 +1,10 @@
 <!-- GRADIENT BORDER WRAPPER -->
 <div
-  class="card-gradient-border animate-fade-in shadow-animated hover:-translate-y-2 transition-all duration-300"
+  class="card-gradient-border animate-fade-in shadow-animated hover:-translate-y-2 transition-all duration-300 rounded-xl"
 >
   <!-- CARD CONTENT -->
   <div
-    class="card-wrapper relative bg-white dark:bg-gray-800 rounded-2xl p-6 transition-all duration-300 flex flex-col gap-4"
+    class="card-wrapper relative bg-white dark:bg-gray-800 rounded-xl p-6 transition-all duration-300 flex flex-col gap-4"
   >
     <!-- TOP: LOGO + TEXT -->
     <div *ngIf="!skillSection" class="flex items-start gap-4">
@@ -12,11 +12,13 @@
         *ngIf="logo"
         [src]="logo"
         [alt]="'card logo'"
-        class="w-14 h-14 rounded-lg object-cover flex-shrink-0 drop-shadow-md dark:drop-shadow-none"
+        class="w-16 h-16 rounded-lg object-cover flex-shrink-0 drop-shadow-md dark:drop-shadow-none"
       />
 
       <div class="flex-1">
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+        <h3
+          class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+        >
           {{ title }}
         </h3>
 
@@ -51,7 +53,7 @@
     <!-- DESCRIPTION -->
     <p
       *ngIf="description"
-      class="text-sm text-gray-700 dark:text-gray-200 leading-relaxed"
+      class="text-sm text-gray-700 dark:text-gray-200 leading-snug md:leading-normal"
     >
       {{ description | translate }}
     </p>
