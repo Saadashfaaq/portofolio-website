@@ -40,6 +40,14 @@
             <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               {{ profileData.address }}
             </p>
+            <!-- Phone Number -->
+            <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+              {{ profileData.phone }}
+            </p>
+            <!-- Email -->
+            <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+              {{ profileData.email }}
+            </p>
           </div>
         </div>
 
@@ -103,7 +111,7 @@
 
           <!-- Summary -->
           <p
-            class="max-w-xl text-l md:text-xl text-gray-600 dark:text-gray-400 leading-snug md:leading-normal"
+            class="w-full text-l md:text-xl text-gray-600 dark:text-gray-400 leading-snug md:leading-normal"
           >
             {{ profileData.summary | translate }}
           </p>

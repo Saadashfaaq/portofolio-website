@@ -17,37 +17,27 @@
 
       <div class="flex-1">
         <h3
-          class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100"
+          class="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 line-clamp-2"
         >
           {{ title }}
         </h3>
 
-        <p *ngIf="subtitle" class="text-sm text-gray-600 dark:text-gray-300">
+        <p
+          *ngIf="subtitle"
+          class="text-sm text-gray-600 dark:text-gray-300 line-clamp-1"
+        >
           {{ subtitle | translate }}
         </p>
 
         <p
           *ngIf="date || location"
-          class="text-xs text-gray-500 dark:text-gray-400"
+          class="text-xs text-gray-500 dark:text-gray-400 line-clamp-2"
         >
           {{ date }}
           <span *ngIf="date && location"> • </span>
           {{ location }}
         </p>
       </div>
-    </div>
-
-    <!-- TOP: LOGO + TEXT  skillSection-->
-    <div *ngIf="skillSection" class="flex items-center gap-4">
-      <app-smart-image
-        *ngIf="logo"
-        [src]="logo"
-        [alt]="'card logo'"
-        class="w-14 h-14 rounded-lg object-cover flex-shrink-0 drop-shadow-md dark:drop-shadow-none"
-      />
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
-        {{ title | translate }}
-      </h3>
     </div>
 
     <!-- DESCRIPTION -->

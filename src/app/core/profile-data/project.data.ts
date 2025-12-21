@@ -48,7 +48,7 @@ export const PROJECT: Project[] = [
 
     links: {
       live: 'https://portofolio-website-lmgk.vercel.app/',
-      github: 'https://github.com/username/portfolio-website',
+      github: 'https://github.com/Saadashfaaq/portofolio-website',
     },
   },
 ];
