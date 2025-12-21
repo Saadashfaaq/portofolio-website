@@ -2,6 +2,7 @@
 
 <section
   id="portofolio"
+  #scrollStartPoint
   class="pt-8 md:pt-10 max-w-6xl mx-auto px-4 bg-gray-50 dark:bg-gray-900"
 >
   <h2
@@ -55,7 +56,9 @@
   <!-- CONTENT SECTIONS -->
   <div class="mt-6 md:mt-8">
     <div *ngIf="activeTab === 'experience'" @tabFade>
-      <app-experience-section></app-experience-section>
+      <app-experience-section
+        (requestScroll)="scrollToPointer()"
+      ></app-experience-section>
     </div>
 
     <div *ngIf="activeTab === 'project'" @tabFade>
@@ -63,11 +66,15 @@
     </div>
 
     <div *ngIf="activeTab === 'certification'" @tabFade>
-      <app-certification-section></app-certification-section>
+      <app-certification-section
+        (requestScroll)="scrollToPointer()"
+      ></app-certification-section>
     </div>
 
     <div *ngIf="activeTab === 'education'" @tabFade>
-      <app-education-section></app-education-section>
+      <app-education-section
+        (requestScroll)="scrollToPointer()"
+      ></app-education-section>
     </div>
   </div>
 </section>

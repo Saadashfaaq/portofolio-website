@@ -1,7 +1,7 @@
 <section id="educations" class="pb-10 px-6 max-w-6xl mx-auto">
   <div class="grid md:grid-cols-2 gap-6 md:gap-8">
     <app-card
-      *ngFor="let education of educations"
+      *ngFor="let education of visibleEducations"
       [logo]="education?.image"
       [title]="education?.institution"
       [subtitle]="education?.program"
@@ -9,5 +9,14 @@
       [location]="education?.location"
       [description]="education?.summary"
     ></app-card>
+  </div>
+
+  <div #scrollEndPoint *ngIf="educations?.length > 2" class="mt-6 text-center">
+    <a
+      (click)="toggleEducation()"
+      class="text-sm text-gray-500 dark:text-gray-400 hover:underline cursor-pointer"
+    >
+      {{ (showAll ? "View less" : "View more") | translate }}
+    </a>
   </div>
 </section>

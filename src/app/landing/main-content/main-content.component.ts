@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -42,6 +42,7 @@ interface TabItem {
   ],
 })
 export class MainContentComponent {
+  @ViewChild('scrollStartPoint') scrollStartPoint!: ElementRef<HTMLElement>;
   /**
    * List of available tabs displayed in the UI.
    */
@@ -79,5 +80,17 @@ export class MainContentComponent {
    */
   setActive(tabKey: string): void {
     this.activeTab = tabKey;
+  }
+
+  /**
+   * Scrolls smoothly to the starting point of the section.
+   * Uses a predefined DOM reference as the scroll target
+   * to bring the content into view from the top.
+   */
+  scrollToPointer(): void {
+    this.scrollStartPoint?.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   }
 }

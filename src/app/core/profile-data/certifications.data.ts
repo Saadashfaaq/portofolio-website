@@ -47,6 +47,49 @@ export const CERTIFICATIONS: Certification[] = [
     ],
   },
   {
+    id: '3',
+    certificateImages: [
+      'assets/images/certificate/certif AI/AI Ethics Certif_page-0001.jpg',
+      'assets/images/certificate/certif AI/AI Intro Certif_page-0001.jpg',
+      'assets/images/certificate/certif AI/Generate AI Intro Certif_page-0001.jpg',
+    ],
+    title: 'AI Engineer',
+    institution: 'Dicoding & IBM',
+    institutionLogo: 'assets/images/logo/ibm-480.png',
+    summary:
+      'Currently enrolled in a comprehensive Artificial Intelligence and Machine Learning program that covers the full lifecycle of data-driven systems, from data processing and visualization to applied machine learning and deep learning. This program focuses on building a strong foundation in AI concepts, ethical considerations, and practical implementation using Python.',
+    location: 'Jakarta',
+    startDate: '2025',
+    endDate: 'Present',
+    syllabus: [
+      'Introduction to Artificial Intelligence and Generative AI',
+      'AI ethics and responsible use of artificial intelligence',
+      'Programming fundamentals using Python',
+      'Fundamentals of data processing and data visualization',
+      'Basic SQL for data analysis',
+      'Data analysis using Python',
+      'Introduction to machine learning concepts and workflows',
+      'Applied machine learning for real-world use cases',
+      'Fundamentals of deep learning',
+      'Building end-to-end machine learning systems',
+    ],
+    technologies: [
+      {
+        name: 'Python',
+        icon: 'assets/images/logo/python-480.png',
+      },
+      {
+        name: 'SQL',
+        icon: 'assets/images/logo/database_14955778.png',
+      },
+      {
+        name: 'Generative AI',
+        icon: 'assets/images/logo/1700403290chatgpt-png.png',
+      },
+    ],
+    achievements: ['Currently in progress'],
+  },
+  {
     id: '2',
     certificateImages: ['assets/images/certificate/Certif (1)_page-0001.jpg'],
     title: 'Frontend Developer',
@@ -93,48 +136,5 @@ export const CERTIFICATIONS: Certification[] = [
         icon: 'assets/images/logo/Cypress_Logomark_Dark-Color.png',
       },
     ],
-  },
-  {
-    id: '3',
-    certificateImages: [
-      'assets/images/certificate/certif AI/AI Ethics Certif_page-0001.jpg',
-      'assets/images/certificate/certif AI/AI Intro Certif_page-0001.jpg',
-      'assets/images/certificate/certif AI/Generate AI Intro Certif_page-0001.jpg',
-    ],
-    title: 'AI Engineer',
-    institution: 'Dicoding & IBM',
-    institutionLogo: 'assets/images/logo/ibm-480.png',
-    summary:
-      'Currently enrolled in a comprehensive Artificial Intelligence and Machine Learning program that covers the full lifecycle of data-driven systems, from data processing and visualization to applied machine learning and deep learning. This program focuses on building a strong foundation in AI concepts, ethical considerations, and practical implementation using Python.',
-    location: 'Jakarta',
-    startDate: '2025',
-    endDate: 'Present',
-    syllabus: [
-      'Introduction to Artificial Intelligence and Generative AI',
-      'AI ethics and responsible use of artificial intelligence',
-      'Programming fundamentals using Python',
-      'Fundamentals of data processing and data visualization',
-      'Basic SQL for data analysis',
-      'Data analysis using Python',
-      'Introduction to machine learning concepts and workflows',
-      'Applied machine learning for real-world use cases',
-      'Fundamentals of deep learning',
-      'Building end-to-end machine learning systems',
-    ],
-    technologies: [
-      {
-        name: 'Python',
-        icon: 'assets/images/logo/python-480.png',
-      },
-      {
-        name: 'SQL',
-        icon: 'assets/images/logo/database_14955778.png',
-      },
-      {
-        name: 'Generative AI',
-        icon: 'assets/images/logo/1700403290chatgpt-png.png',
-      },
-    ],
-    achievements: ['Currently in progress'],
   },
 ];

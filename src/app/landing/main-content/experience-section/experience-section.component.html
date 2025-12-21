@@ -1,7 +1,7 @@
 <section id="experience" class="pb-10 px-6 max-w-6xl mx-auto">
   <div class="grid md:grid-cols-2 gap-6 md:gap-8">
     <app-card
-      *ngFor="let experience of experiences"
+      *ngFor="let experience of visibleExperiences"
       [logo]="experience?.companyLogo"
       [title]="experience?.company"
       [subtitle]="experience?.position"
@@ -10,5 +10,14 @@
       [description]="experience?.summary"
       [detailLink]="'/details/experience/' + experience?.id"
     ></app-card>
+  </div>
+
+  <div #scrollEndPoint *ngIf="experiences?.length > 2" class="mt-6 text-center">
+    <a
+      (click)="toggleExperiences()"
+      class="text-sm text-gray-500 dark:text-gray-400 hover:underline cursor-pointer"
+    >
+      {{ (showAll ? "View less" : "View more") | translate }}
+    </a>
   </div>
 </section>
