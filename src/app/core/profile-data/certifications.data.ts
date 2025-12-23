@@ -137,4 +137,83 @@ export const CERTIFICATIONS: Certification[] = [
       },
     ],
   },
+  {
+    id: '4',
+    certificateImages: [
+      'assets/images/certificate/python-certif/python-certif_page-0001.jpg',
+      'assets/images/certificate/python-certif/python-certif_page-0002.jpg',
+      'assets/images/certificate/python-certif/python-certif_page-0003.jpg',
+    ],
+    title: 'Python Programming',
+    institution: 'IDCamp Academy & Dicoding',
+    institutionLogo: 'assets/images/logo/dicoding.png',
+    summary:
+      'This course is designed for programmer who want to learn the fundamentals of Python programming according to industry standards. By the end of the class, students will be able to create programs using Python across various IDEs such as Visual Studio Code, Jupyter Notebook, and Google Colaboratory.',
+    location: 'Online',
+    startDate: 'December 2025',
+    endDate: 'December 2025',
+    syllabus: [
+      'Getting Started with Python: Introduction to Python language, its evolution, versions, and writing your first code. (5h 30m)',
+      'Interacting with Data: How to handle and operate different types of data using Python. (11h 30m)',
+      'Expressions: Concepts of expressions and their implementation in Python. (3h 55m)',
+      'Sequential Actions: Understanding sequential actions and applying them in Python. (2h 10m)',
+      'Control Flow: Using branching and looping to control program flow and handle errors in Python. (6h 20m)',
+      'Arrays and Processing: Understanding arrays and applying them in Python programming. (4h 15m)',
+      'Matrices: Concepts of matrices and their implementation in Python. (2h 35m)',
+      'Subprograms: Effective program design by breaking it into functions and procedures. (6h 5m)',
+      'Object-Oriented Programming (OOP): Introduction to objects, classes, methods, attributes, and inheritance in Python. (Optional) (5h 25m)',
+      'Python Style Guide: Understanding PEP8, code formatting, combined statements, and naming conventions. (3h 35m)',
+      'Unit Testing: Techniques for automated program testing in Python with unit tests and examples. (1h 35m)',
+      'Popular Python Libraries: Overview of popular libraries for text processing, mathematics, parsing, data manipulation, file management, web scraping, machine learning, and web development. (3h 20m)',
+    ],
+    technologies: [
+      { name: 'Python', icon: 'assets/images/logo/python-480.png' },
+      {
+        name: 'Visual Studio Code',
+        icon: 'assets/images/logo/visual-studio_906324 (2).png',
+      },
+    ],
+    achievements: [
+      'Developed functional Python programs across multiple IDEs.',
+      'Gained proficiency in Python basics and control flow.',
+      'Implemented arrays, matrices, and subprograms effectively.',
+      'Learned and applied OOP principles in Python (optional module).',
+      'Applied unit testing for automated program verification.',
+    ],
+  },
+  {
+    id: '5',
+    certificateImages: [
+      'assets/images/certificate/ai-certi/ai-certif_page-0001.jpg',
+      'assets/images/certificate/ai-certi/ai-certif_page-0002.jpg',
+    ],
+    title: 'Artificial Intelligence',
+    institution: 'IDCamp Academy & Dicoding',
+    institutionLogo: 'assets/images/logo/dicoding.png',
+    summary:
+      'This course is designed programmer who want to start a career in Artificial Intelligence. After completing the class, students are expected to understand fundamental AI concepts and apply them effectively.',
+    location: 'Online',
+    startDate: 'December 2025',
+    endDate: 'December 2025',
+    syllabus: [
+      'Introduction to Artificial Intelligence (AI): Understanding fundamental concepts of AI. (1h 30m)',
+      'Data for AI: Basic concepts of data and its usage in AI development. (1h 25m)',
+      'Introduction to Machine Learning: Core concepts of Machine Learning as part of AI with practical examples. (2h 30m)',
+      'Deep Learning for Everyone: Key concepts in Deep Learning and practical implementation examples. (2h 25m)',
+    ],
+    technologies: [
+      { name: 'Python', icon: 'assets/images/logo/python-480.png' },
+      {
+        name: 'Machine Learning',
+        icon: 'assets/images/logo/brain_12219524.png',
+      },
+      { name: 'Deep Learning', icon: 'assets/icons/brain_12219524.png' },
+    ],
+    achievements: [
+      'Understood fundamental AI concepts.',
+      'Learned to work with data for AI applications.',
+      'Applied basic Machine Learning techniques.',
+      'Implemented practical Deep Learning examples.',
+    ],
+  },
 ];
