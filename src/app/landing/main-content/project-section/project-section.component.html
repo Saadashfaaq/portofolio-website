@@ -1,10 +1,7 @@
 <section id="projects" class="pb-10 px-6 max-w-6xl mx-auto">
   <div class="grid md:grid-cols-2 gap-6 md:gap-8">
     <app-card
-      *ngFor="let project of projects"
-      [ngClass]="{
-        'md:col-span-2 md:max-w-[48%] md:mx-auto': projects.length === 1
-      }"
+      *ngFor="let project of visibleCertificates"
       [logo]="project?.logo"
       [title]="project?.name"
       [subtitle]="project?.role"
@@ -13,5 +10,14 @@
       [description]="project?.summary"
       [detailLink]="'/details/project/' + project?.id"
     ></app-card>
+  </div>
+
+  <div #scrollEndPoint *ngIf="projects?.length > 2" class="mt-6 text-center">
+    <a
+      (click)="toggleProjects()"
+      class="text-sm text-gray-500 dark:text-gray-400 hover:underline cursor-pointer"
+    >
+      {{ (showAll ? "View less" : "View more") | translate }}
+    </a>
   </div>
 </section>

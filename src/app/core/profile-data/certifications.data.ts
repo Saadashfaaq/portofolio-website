@@ -216,4 +216,52 @@ export const CERTIFICATIONS: Certification[] = [
       'Implemented practical Deep Learning examples.',
     ],
   },
+  {
+    id: '6',
+    certificateImages: [
+      'assets/images/certificate/ai-certi/ai-certif_page-0001.jpg',
+      'assets/images/certificate/ai-certi/ai-certif_page-0002.jpg',
+    ],
+    title: 'Machine Learning Pipeline',
+    institution: 'Dicoding Indonesia',
+    institutionLogo: 'assets/images/logo/dicoding.png',
+    summary:
+      'A comprehensive machine learning certification focused on building end-to-end ML pipelines. The program covers data preprocessing, exploratory data analysis, unsupervised learning with clustering, supervised classification, model evaluation, and practical implementation using real-world datasets.',
+    location: 'Indonesia',
+    startDate: 'Nov 2025',
+    endDate: 'Dec 2025',
+
+    syllabus: [
+      'Introduction to Machine Learning and workflow fundamentals',
+      'Data collection, cleaning, and preprocessing techniques',
+      'Exploratory Data Analysis (EDA) for numerical and categorical data',
+      'Unsupervised learning using K-Means clustering',
+      'Cluster evaluation with Elbow Method and Silhouette Score',
+      'Dimensionality reduction using Principal Component Analysis (PCA)',
+      'Supervised learning with Decision Tree and Random Forest',
+      'Model evaluation using accuracy, precision, recall, and F1-score',
+      'Hyperparameter tuning with GridSearchCV',
+      'Exporting trained models and datasets for deployment',
+    ],
+
+    technologies: [
+      { name: 'Python', icon: 'assets/images/logo/python-480.png' },
+      { name: 'Scikit-learn', icon: 'assets/images/logo/Scikit-learn.png' },
+      { name: 'Pandas', icon: 'assets/images/logo/pandas.png' },
+      { name: 'NumPy', icon: 'assets/images/logo/NumPy.png' },
+      { name: 'Matplotlib', icon: 'assets/images/logo/Matplotlib.png' },
+      { name: 'Seaborn', icon: 'assets/images/logo/Seaborn.png' },
+      {
+        name: 'Jupyter Notebook',
+        icon: 'assets/images/logo/Jupyter Notebook.png',
+      },
+    ],
+
+    achievements: [
+      'Completed an end-to-end machine learning project integrating clustering and classification',
+      'Successfully implemented unsupervised learning to generate labels from unlabeled data',
+      'Built and evaluated multiple classification models with hyperparameter tuning',
+      'Produced reproducible notebooks and deployment-ready model artifacts',
+    ],
+  },
 ];

@@ -51,4 +51,48 @@ export const PROJECT: Project[] = [
       github: 'https://github.com/Saadashfaaq/portofolio-website',
     },
   },
+  {
+    id: '2',
+    name: 'Bank Transaction Clustering & Classification',
+    logo: 'assets/images/logo/brain_12219524.png',
+    images: [
+      'assets/images/machine-learning-project-1/machine-learning-1.png',
+      'assets/images/machine-learning-project-1/machine-learning-2.png',
+    ],
+    type: 'Machine Learning Project',
+    role: 'Machine Learning Engineer',
+    summary:
+      'An end-to-end machine learning project that integrates unsupervised and supervised learning techniques. The project applies K-Means clustering to unlabeled bank transaction data to generate customer segments, followed by supervised classification models to predict cluster membership. The workflow covers data preprocessing, exploratory data analysis, model training, evaluation, and deployment-ready artifacts.',
+    period: 'Dec 2025',
+
+    technologies: [
+      { name: 'Python', icon: 'assets/images/logo/python-480.png' },
+      { name: 'Scikit-learn', icon: 'assets/images/logo/Scikit-learn.png' },
+      { name: 'Pandas', icon: 'assets/images/logo/pandas.png' },
+      { name: 'NumPy', icon: 'assets/images/logo/NumPy.png' },
+      { name: 'Matplotlib', icon: 'assets/images/logo/Matplotlib.png' },
+      { name: 'Seaborn', icon: 'assets/images/logo/Seaborn.png' },
+      {
+        name: 'Jupyter Notebook',
+        icon: 'assets/images/logo/Jupyter Notebook.png',
+      },
+    ],
+
+    features: [
+      'Performed exploratory data analysis (EDA) with numerical and categorical visualizations',
+      'Applied data cleaning, feature encoding, scaling, and outlier handling',
+      'Implemented K-Means clustering with Elbow Method and Silhouette Score evaluation',
+      'Used PCA for cluster visualization and dimensionality reduction',
+      'Generated cluster labels to create a supervised learning dataset',
+      'Built and evaluated Decision Tree and Random Forest classifiers',
+      'Applied hyperparameter tuning using GridSearchCV',
+      'Exported trained models and processed datasets for reuse and deployment',
+    ],
+
+    links: {
+      github:
+        'https://github.com/Saadashfaaq/dicoding-machine-learning-project',
+      live: 'https://github.com/Saadashfaaq/dicoding-machine-learning-project',
+    },
+  },
 ];

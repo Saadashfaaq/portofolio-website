@@ -62,7 +62,9 @@
     </div>
 
     <div *ngIf="activeTab === 'project'" @tabFade>
-      <app-project-section></app-project-section>
+      <app-project-section
+        (requestScroll)="scrollToPointer()"
+      ></app-project-section>
     </div>
 
     <div *ngIf="activeTab === 'certification'" @tabFade>
