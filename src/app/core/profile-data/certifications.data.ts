@@ -184,8 +184,9 @@ export const CERTIFICATIONS: Certification[] = [
   {
     id: '5',
     certificateImages: [
-      'assets/images/certificate/ai-certi/ai-certif_page-0001.jpg',
-      'assets/images/certificate/ai-certi/ai-certif_page-0002.jpg',
+      'assets/images/certificate/machine-learning-certif/machine-learning-certif-1.jpg',
+      'assets/images/certificate/machine-learning-certif/machine-learning-certif-2.jpg',
+      'assets/images/certificate/machine-learning-certif/machine-learning-certif-3.jpg',
     ],
     title: 'Artificial Intelligence',
     institution: 'IDCamp Academy & Dicoding',
