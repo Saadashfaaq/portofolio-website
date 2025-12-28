@@ -41,7 +41,7 @@ export class ProjectSectionComponent {
    * - When expanding the list (showAll = false → true),
    *   scrolls smoothly to the defined end point of the certificates section.
    */
-  toggleCertificates(): void {
+  toggleProjects(): void {
     if (this.showAll) {
       this.showAll = !this.showAll;
       this.requestScroll.emit();
