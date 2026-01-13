@@ -53,7 +53,7 @@ export const PROJECT: Project[] = [
   },
   {
     id: '2',
-    name: 'Bank Transaction Clustering & Classification',
+    name: 'Bank Transaction',
     logo: 'assets/images/logo/brain_12219524.png',
     images: [
       'assets/images/machine-learning-project-1/machine-learning-1.png',

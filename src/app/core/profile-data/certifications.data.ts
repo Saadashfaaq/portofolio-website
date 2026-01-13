@@ -208,7 +208,7 @@ export const CERTIFICATIONS: Certification[] = [
         name: 'Machine Learning',
         icon: 'assets/images/logo/brain_12219524.png',
       },
-      { name: 'Deep Learning', icon: 'assets/icons/brain_12219524.png' },
+      { name: 'Deep Learning', icon: 'assets/images/logo/brain_12219524.png' },
     ],
     achievements: [
       'Understood fundamental AI concepts.',
