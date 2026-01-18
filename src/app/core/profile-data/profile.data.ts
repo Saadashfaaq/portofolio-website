@@ -23,10 +23,10 @@ export const PROFILE_DATA: ProfileData = {
     {
       id: 'linkedin',
       label: 'LinkedIn',
-      value: 'www.linkedin.com/in/mochamad-reynaldy-septian-hadi-aa18b6171/',
+      value: 'https://www.linkedin.com/in/reynaldy-septian-81565b1b2/',
       subText: 'Professional background',
       icon: 'code',
-      url: 'https://www.linkedin.com/in/mochamad-reynaldy-septian-hadi-aa18b6171/',
+      url: 'https://www.linkedin.com/in/reynaldy-septian-81565b1b2/',
       priority: 2,
     },
     {
